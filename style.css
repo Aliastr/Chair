@@ -207,6 +207,9 @@ body{
     color: #FFFFFF;
 }
 .map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 35px;
     width: 170px;
     background: #66C05D;
