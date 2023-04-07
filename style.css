@@ -7,6 +7,12 @@ body{
     font-family: 'Roboto';
     font-style: normal;
 }
+strong{
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
 .headerNav{
     display: flex;
     justify-content: center;
@@ -19,11 +25,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 405px;
-    padding-right: 405px;
+    padding: 0 21%;
     height: 120px;
     background: #FFFFFF;
-
     border: 1px solid #E5E5E5;
 }
 .prElement{
@@ -31,6 +35,12 @@ body{
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .titleShop{
     font-weight: 700;
@@ -60,9 +70,8 @@ body{
     flex-direction: column;
     gap: 50px;
     position: absolute;
-    top: 0;
-    margin-top: 192px;
-    margin-left: 405px;
+    top: 21%;
+    left: 21%;
     color: #FFFFFF;
     z-index: 2;
     width: 308px;
@@ -91,29 +100,33 @@ body{
 .item {
     display: flex;
     flex-direction: column;
-    width: 1110px;
-    margin: 80px auto 0;
+    width: calc(100% - 42%);
+    margin: 80px 21% 35px 21%;
+    gap: 38px;
 }
 .itemH{
     display: flex;
     justify-content: space-between;
+
 }
 .shop{
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
 }
 .itemProd{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;    
-    width: 255px;
+    justify-content: center; 
+    align-items: center;   
+    width: calc(90% / 4);
     height: 363px;
     background: #FFFFFF;
 }
 .itemProd img {
-    width: 125px;
-    height: 166px;
+    width: auto;
+    height: auto;
     margin-top: 25px;
     margin-left: 65px;
     margin-right: 65px;
@@ -127,8 +140,9 @@ body{
     font-weight: 500;
     font-size: 21px;
     line-height: 25px;
-    text-align: center;
     letter-spacing: 0.05em;
+
+    color: #000000;
 }
 .itemAdd{
     display: flex;
@@ -138,6 +152,7 @@ body{
     margin-right: 62px;
     margin-bottom: 5px;
     height: 35px;
+    width: 50%;
     background: #66C05D;
     border-radius: 30px;
     text-align: center;
@@ -151,60 +166,49 @@ body{
 .info{
     display: flex;
     gap: 30px;
-    width: 1110px;
-    height: 212px;
+    width: calc(100% - 42%);
+    height: auto;
     margin: 100px auto 132px;
 }
 .infoBlock{
     display: flex;
-    gap: 65px;
-    align-items: center;
-    width: 540px;
-    height: 212px;
+    width: calc(100% - 30px);
+    gap: 12%;
+    padding: 35px 45px 35px 40px;
     background: #66C05D;
-    padding-left: 35px;
-    padding-top: 35px;
-    padding-right: 40px;
-    padding-bottom: 35px;
-    
+    justify-content: space-between;
 }
-.infoBlockText{
+.infoBlokDesk{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    width: 55%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
     color: #FFFFFF;
 }
-.infBlTitle{
+.infoBlokDesk span {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
 }
-.infBlDesk{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-}
-.infoBlockText input{
-    padding-left: 25px;
-    height: 35px;
-    left: 445px;
-    top: 1605px;
+.infoBlokDesk input{
     background: #FFFFFF;
     border-radius: 30px;
-    border: 0px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #C4C4C4;
 }
-.infoBlockR{
+.infoBlokImg{
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 540px;
-    height: 212px;
-    background: #66C05D;
-    padding-left: 35px;
-    padding-top: 35px;
-    padding-right: 40px;
-    padding-bottom: 35px;
-    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
 }
 .map{
     display: flex;
@@ -223,7 +227,7 @@ body{
     height: 184px;
     background: #FFFFFF;
     align-items: center;
-    padding: 0 405px;
+    padding: 0 21%;
 }
 .call {
     display: flex;
@@ -259,8 +263,7 @@ body{
     gap: 40px;
     height: 64px;
     align-items: center;
-    margin-left: 405px;
-    margin-right: 405px;
+    margin: 0 21%;
     
 }
 .legalItem{
@@ -268,4 +271,44 @@ body{
     font-size: 12px;
     line-height: 14px;
     color: #828282;
+}
+
+@media screen and (max-width: 1000px) {
+    .shop{
+        flex-direction:row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .itemProd{
+        width: calc(90% / 2);
+    }
+    .info{
+        flex-direction: column;
+    }
+    .infoBlock{
+        width: 100%;
+    }
+    .footerFlex{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .prElement{
+        flex-wrap: wrap;
+    }
+    .mainNav{
+        padding: 0 21%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    .mainNavItem{
+        width: calc((100% - 40px) / 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
